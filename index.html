@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              serif: ['Fraunces', 'serif']
+            },
+            extend: {
+              colors: {
+                'green': '#3d8168',
+                'dark-green': '#194031',
+                'cream': '#f3eae3',
+                'gray': '#6c7289',
+                'dark-blue': '#242d38'
+              }
+            },
+            screens: {
+              md: '850px'
+            }
+          }
+    };
+  </script>
+</head>
+<body class="bg-cream">
+
+  <div class="flex items-center justify-center h-screen px-8 py-8">
+      <div class="flex flex-col rounded-lg bg-white mx-auto my-auto md:flex-row max-w-[800px] md:w-[70%]">
+        <img src="images/image-product-mobile.jpg" alt="Perfume"
+        class="rounded-t-lg object-cover md:w-1/2 md:rounded-t-none md:rounded-l-lg">
+        <div class="flex flex-col px-5 py-5 space-y-5 md:px-8 md:py-8 md:justify-center">
+          <p class="uppercase tracking-widest text-gray">Perfume</p>        
+          <h1 class="text-xl mt-1 font-serif text-4xl text-dark-blue">Gabrielle Essence Eau De Perfum</h1>
+          <p class=" text-gray">  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+          <div class="flex space-x-5">
+            <span class="text-4xl font-serif text-green">$149.99</span>
+            <span class="my-auto line-through text-gray">$169.99</span>
+          </div>
+          <button class="text-center bg-green text-white py-4 px-5 rounded hover:bg-dark-green active:bg-dark-green">
+            <img src="images/icon-cart.svg" alt="Cart icon" class=inline>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+  </div>
+</body>
+</html>
